@@ -2,13 +2,14 @@
 
 Name:           python-%{real_name}
 Version:        0.6.14a1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple OGG Vorbis, Opus and FLAC bindings for Python
 License:        Unlicense
 BuildArch:      noarch
-
 URL:            https://github.com/TeamPyOgg/%{real_name}/
-Source0:        https://github.com/TeamPyOgg/%{real_name}/archive/%{version}.tar.gz#/%{real_name}-%{version}.tar.gz
+
+Source0:        %{url}/archive/%{version}.tar.gz#/%{real_name}-%{version}.tar.gz
+Patch0:         %{name}-version.patch
 
 BuildRequires:  python3-devel
 
@@ -43,6 +44,8 @@ Summary:        %{summary}
 %doc README.md
 
 %changelog
+* Sat Jun 06 2026 Simone Caronni <negativo17@gmail.com> - 0.6.14a1-2
+- Fix version.
+
 * Sat Jun 06 2026 Simone Caronni <negativo17@gmail.com> - 0.6.14a1-1
 - First build.
-
